@@ -10,15 +10,24 @@ namespace valami
     {
         static void Main(string[] args)
         {
-            List<int> bekertSzamok = new List<int>();
-            //darabszám
+            List<int> bekertSz = new List<int>();
+            
             Console.WriteLine("Hány darab elemet szeretne megadni?");
-            int elemSzam = Convert.ToInt32(Console.ReadLine());
-            //bekérés
-            for (int i = 0; i < elemSzam; i++)
+            int szam = Convert.ToInt32(Console.ReadLine());
+            
+            for (int i = 0; i < szam; i++)
             {
                 Console.WriteLine("Kérem adjon meg egy számot!");
-                bekertSzamok.Add(Convert.ToInt32(Console.ReadLine()));
+                bekertSz.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            
+            int max = bekertSz[0];
+            for (int i = 0; i < bekertSz.Count; i++)
+            {
+                if (bekertSz[i] > max)
+                {
+                    max = bekertSz[i];
+                }
             }
         }
     }
