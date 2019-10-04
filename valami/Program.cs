@@ -31,7 +31,7 @@ namespace valami
                     max = bekertSz[i];
                 }
             }
-                Console.WriteLine("A legnagyobb szám: {0}", max);
+                Console.WriteLine("A legnagyobb szám: {0}",max);
                 int min = bekertSz[0];
             for (int i = 0; i < bekertSz.Count; i++)
             {
