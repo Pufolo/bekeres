@@ -10,6 +10,8 @@ namespace valami
     {
         static void Main(string[] args)
         {
+        try
+        {
             List<int> bekertSz = new List<int>();
             
             Console.WriteLine("Hány darab elemet szeretne megadni?");
@@ -29,6 +31,23 @@ namespace valami
                     max = bekertSz[i];
                 }
             }
+                Console.WriteLine("A legnagyobb szám: {0}", max);
+                int min = bekertSz[0];
+            for (int i = 0; i < bekertSz.Count; i++)
+            {
+                if (bekertSz[i] < min)
+                {
+                    min = bekertSz[i];
+                }
+            }
+                Console.WriteLine("A legkisebb szám: {0}",min);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Hiba" + e);
+        }
+
+            Console.ReadLine();
         }
     }
 }
